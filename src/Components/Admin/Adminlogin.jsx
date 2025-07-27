@@ -44,7 +44,7 @@ export const Adminlogin = () => {
 
   const handleGoogleLogin = async () => {
     try {
-      await signInWithPopup(auth, googleProvider);
+      await signInWithPopup(auth);
       toast.success("Logged in with Google!");
       navigate("/admin");
     } catch (error) {
