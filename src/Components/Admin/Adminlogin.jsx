@@ -127,6 +127,7 @@ export const Adminlogin = () => {
               </p>
 
               <button
+               onClick={handleGoogleLogin}
                 type="submit"
                 className="w-full bg-[#8ECAE6] py-3 font-semibold text-xl text-white rounded-md mt-6 hover:bg-emerald-500"
               >
