@@ -9,7 +9,7 @@ const AdminSidebar = () => {
 
     const handleLogout = () => {
         // localStorage.removeItem("admin");
-        navigate("/");
+        navigate("/admin-login");
     }
   return (
     <div className="p-6 bg-slate-100">
