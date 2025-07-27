@@ -18,7 +18,7 @@ const Home = () => {
             Book appointments for welfare programs, training, and job support from Saylani Welfare Trust.
           </p>
           <a
-            href="/book"
+            href="/book-appointment"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md text-lg font-medium transition"
           >
             Book Now
