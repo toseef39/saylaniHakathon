@@ -183,7 +183,7 @@ export const Adminsignup = () => {
             </button>
           </form>
 
-          <button
+          {/* <button
             onClick={handleGoogleSignup}
             className="w-full text-[#023047] py-2 border rounded-md border-[#023047] text-xl hover:bg-emerald-500 flex items-center justify-center gap-2"
           >
@@ -197,7 +197,7 @@ export const Adminsignup = () => {
           >
             <FaApple size={23} />
             Continue with Apple
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

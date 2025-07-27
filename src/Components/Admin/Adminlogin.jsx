@@ -135,14 +135,14 @@ export const Adminlogin = () => {
               </button>
             </form>
 
-            <button onClick={handleGoogleLogin} className="w-full text-[#023047] py-2 border rounded-md border-[#023047] text-xl hover:bg-emerald-500 flex items-center justify-center gap-2">
+            {/* <button onClick={handleGoogleLogin} className="w-full text-[#023047] py-2 border rounded-md border-[#023047] text-xl hover:bg-emerald-500 flex items-center justify-center gap-2">
               <FcGoogle size={23} />
               Continue with Google
             </button>
             <button onClick={handleAppleLogin} className="w-full text-[#023047] py-2 border rounded-md border-[#023047] text-xl hover:bg-emerald-500 flex items-center justify-center gap-2 mt-4">
               <FaApple size={23} />
               Continue with Apple
-            </button>
+            </button> */}
         </div>
       </div>
     </div>
