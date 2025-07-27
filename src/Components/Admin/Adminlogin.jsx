@@ -44,7 +44,7 @@ export const Adminlogin = () => {
 
   const handleGoogleLogin = async () => {
     try {
-      await signInWithPopup(auth);
+      await signInWithPopup(auth, googleProvider);
       toast.success("Logged in with Google!");
       navigate("/admin");
     } catch (error) {
@@ -91,49 +91,49 @@ export const Adminlogin = () => {
 
           {/* <form onSubmit={handleSubmit}> */}
            <form onSubmit={handleSubmit}>
-              <input
-                type="email"
-                name="email"
-                value={input.email}
-                onChange={handleChange}
-                placeholder="Email"
-                className="w-full h-11 border border-[#023047] outline-0 rounded-md px-4"
-              />
+  <input
+    type="email"
+    name="email"
+    value={input.email}
+    onChange={handleChange}
+    placeholder="Email"
+    required
+    className="w-full h-11 border border-[#023047] outline-0 rounded-md px-4"
+  />
 
-              <input
-                type={showpassword ? "text" : "password"}
-                name="password"
-                value={input.password}
-                onChange={handleChange}
-                placeholder="Password"
-                className="w-full h-11 border mt-4 rounded-md px-4 border-[#023047] outline-0"
-              />
-              <div className="float-right relative bottom-8 me-3 cursor-pointer">
-                {showpassword ? (
-                  <IoEyeOutline onClick={Passwordshow} />
-                ) : (
-                  <IoEyeOffOutline
-                    color="#023047"
-                    onClick={handleShowPassword}
-                  />
-                )}
-              </div>
+  <input
+    type={showpassword ? "text" : "password"}
+    name="password"
+    value={input.password}
+    onChange={handleChange}
+    placeholder="Password"
+    required
+    className="w-full h-11 border mt-4 rounded-md px-4 border-[#023047] outline-0"
+  />
 
-              <p
-                onClick={() => navigate("/forgotpass")}
-                className="text-teal-400 cursor-pointer float-end mt-2"
-              >
-                Forgot Password
-              </p>
+  <div className="float-right relative bottom-8 me-3 cursor-pointer">
+    {showpassword ? (
+      <IoEyeOutline onClick={handleShowPassword} />
+    ) : (
+      <IoEyeOffOutline color="#023047" onClick={handleShowPassword} />
+    )}
+  </div>
 
-              <button
-               onClick={handleGoogleLogin}
-                type="submit"
-                className="w-full bg-[#8ECAE6] py-3 font-semibold text-xl text-white rounded-md mt-6 hover:bg-emerald-500"
-              >
-                Login
-              </button>
-            </form>
+  <p
+    onClick={() => navigate("/forgotpass")}
+    className="text-teal-400 cursor-pointer float-end mt-2"
+  >
+    Forgot Password
+  </p>
+
+  <button
+    type="submit"
+    className="w-full bg-[#8ECAE6] py-3 font-semibold text-xl text-white rounded-md mt-6 hover:bg-emerald-500"
+  >
+    Login
+  </button>
+</form>
+
 
             {/* <button onClick={handleGoogleLogin} className="w-full text-[#023047] py-2 border rounded-md border-[#023047] text-xl hover:bg-emerald-500 flex items-center justify-center gap-2">
               <FcGoogle size={23} />
