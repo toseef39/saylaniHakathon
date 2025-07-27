@@ -35,7 +35,7 @@ export const Adminlogin = () => {
     try {
       await signInWithEmailAndPassword(auth, input.email, input.password);
       toast.success("Login successful!");
-      navigate("/admin-dashboard");
+      navigate("/admin");
     } catch (error) {
       toast.error(error.message);
     }
